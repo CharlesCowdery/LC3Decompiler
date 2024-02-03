@@ -346,7 +346,10 @@ string remap_escapes(string in) {
 
 int main()
 {
-    ifstream file("bitbomb_G.tbin");
+    cout << "enter file name" << endl;
+    string file_name;
+    getline(cin, file_name);
+    ifstream file(file_name);
     stringstream buffer;
     buffer << file.rdbuf();
     int i = 0;
